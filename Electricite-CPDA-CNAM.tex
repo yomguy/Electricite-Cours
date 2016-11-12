@@ -1,6 +1,6 @@
 \documentclass[pdftex,11pt,a4paper,twoside]{report}
 
-\usepackage{pdf_course_profile}
+\usepackage{sty/pdf_course_profile}
 
 %\title{Cours d'électricité}
 
@@ -26,7 +26,7 @@
 \maketitle
 \newpage
 
-\input{elec_cpda_cnam-resume}
+\input{tex/resume}
 \newpage
 
 \setcounter{page}{3}
@@ -37,22 +37,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{Electrostatique}\label{chap_elecstat}
-\input{elec_cpda_cnam-chap_elecrostatique}
+\input{tex/chap_elecrostatique}
 \cleardoublepage
 
 \chapter{Electrocinétique}\label{chap_eleccine}
-\input{elec_cpda_cnam-chap_elecrocinetique}
+\input{tex/chap_elecrocinetique}
 \cleardoublepage
 
 \chapter{Electromagnétisme}\label{chap_elecmagn}
-\input{elec_cpda_cnam-chap_elecromagnetisme}
+\input{tex/chap_elecromagnetisme}
 
 \chapter{Courants Variables}\label{chap_cour_var}
-\input{elec_cpda_cnam-chap_courants_variables}
+\input{tex/chap_courants_variables}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
-\input{programme_electricite}
+\input{tex/programme_electricite}
 
 \end{document}
