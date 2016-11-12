@@ -1,0 +1,87 @@
+
+\section{Représentation complexe des grandeurs sinusoïdales}
+
+\section{Impédances complexes}
+
+L'impédance est définie comme le rapport de la tension $u(t)$ (en V) et du courant $i(t)$ où $u(t)=U_0 e^{j\omega t+\phi_i}$ avec $U_0$ la tension max et $\omega$ la pulsation du signal, et où $u(t)=I_0 e^{j\omega t+\phi_u}$ avec $I_0$ est l'intensité max. On écrit :
+
+\begin{equation}\label{imp_comp}
+ Z=\frac{u}{i}
+\end{equation}
+
+\subsection{Résistance}
+
+Soit $Z_R$ l'impédance complexe d'une résistance. D'après l'équation \ref{imp_comp}, $Z_R$ est la résistance réelle du dipôle telle que:
+
+\begin{equation}
+ Z_R=\frac{U_0}{I_0}=R
+\end{equation}
+
+\subsection{Capacitance}
+
+Soit $Z_C$ l'impédance complexe d'une capacitance (condensateur). On sait que $i(t)=C \frac{\partial u(t)}{\partial t}$. Or $\frac{\partial u(t)}{\partial t} = j\omega U_0 e^{j\omega t}$. On en déduit d'après l'équation \ref{imp_comp}:
+
+ \begin{equation}
+  Z_C=\frac{1}{j C\omega}
+ \end{equation}
+
+\subsection{Inductance}
+
+Soit $Z_L$ l'impédance complexe d'une inductance (solénoïde). On sait que $u(t)=L \frac{\partial i(t)}{\partial t}$. Or $\frac{\partial i(t)}{\partial t} = j\omega I_0 e^{j\omega t}$. On en déduit d'après l'équation \ref{imp_comp}:
+
+ \begin{equation}
+  Z_L=j L\omega
+ \end{equation}
+
+\subsection{Puissances}
+
+\subsubsection{Puissance instantanée}
+
+\begin{equation}
+ p=ui\ \ \ (\mathrm{W = J.s^{-1}})
+\end{equation}
+
+\subsubsection{Puissance active (absorbée)}
+
+La puissance active correspond à l'énergie moyenne consommée par unité de temps \cad à la \textbf{puissance moyenne consommée} :
+
+\begin{equation}
+ P=<p>=\frac{1}{T}\int_0^T p\ dt
+\end{equation}
+
+d'où, en régime sinusoïdal:
+
+\begin{equation}
+ P=\frac{U_0 I_0}{2} \cos \phi
+\end{equation}
+
+soit,
+
+\begin{equation}
+ P=U I \cos \phi
+\end{equation}
+
+où $I=\frac{I_0}{\sqrt{2}}$ et $U=\frac{U_0}{\sqrt{2}}$ sont respectivement la valeur efficace du courant et la valeur efficace de la tension dans le circuit.
+
+\subsubsection{Puissance réactive}
+
+\begin{equation}
+ Q=\frac{U_0 I_0}{2} \sin \phi = U I \sin \phi
+\end{equation}
+
+\subsubsection{Puissance apparente}
+
+\begin{eqnarray}
+ S & = & U I\\
+ S & = & \sqrt{P^2 + Q^2}
+\end{eqnarray}
+
+
+\section{Etude de cas}
+
+\subsection{Circuit RLC}
+
+\subsection{Théorème de Thévenin en notation complexe}
+
+\subsection{Théorème de Norton en notation complexe}
+

@@ -1,0 +1,716 @@
+\section{Généralités}
+
+\subsection{La charge électrique élémentaire}
+
+Une des manifestations quotidiennes de l'effet de l'électricité statique est l'attraction mutuelle de petits corps légers avec des corps de plus grance masse. Une expérience bien connue consiste par exemple à attirer un bout de papier avec une baguette métallique préalablement frottée par un morceau de laine. Ce type de phénomène est connu depuis longtemps et même rapporté par Thalès de Milet vers 600 av. J.-C. Ce dernier observa en effet un déplacement spontané de brindilles de paille vers un morceau de ambre jaune\footnote{L'ambre jaune est une sorte de résine fossilisée.} préalablement frotté. Le mot \textbf{électricité} provient d'ailleurs du mot grec \emph{àlektron} qui signifie ambre.
+
+L'étude des phénomènes électriques a continué jusqu'au XIXème siècle où il a été élaboré la théorie unifiée des phénomènes électriques et magnétiques, appelée \textbf{électromagnétisme}.
+
+%On se contentera pour l'instant de prendre l'habitude de parler de phénomènes \underline{électrostatiques}.\\
+
+\subsubsection{Observations d'après l'expérience.}
+
+Dans la nature, on explique l'ensemble des effets d'électricité statique par l'existence de particules portant une charge $q$ positive ou négative. Les éléments dont les charges sont de mêmes signes se repoussent tandis que les éléments dont les charges sont de signes opposés s'attirent.
+
+La matière est en effet constituée d'atomes, ces atomes étant eux-mêmes constitués de particules élémentaires : les \textbf{électrons}, les \textbf{protons} et les \textbf{neutrons}. Les électrons gravitent autour du noyau constitué de neutrons et de protons. Ces trois types de particules possèdent des propriétés différentes comme par exemple leur masses ou leur charges électriques respectives. Dans le système d'unité international, l'unité de charge électrique est le \textbf{Coulomb} noté \textbf{C}.
+
+\begin{center}
+\begin{tabular}{lll}
+Electron : & $q_{e} = -e = -1.602.10^{-19} \ \mathrm{C}$ & $m_{e}=9.109.10^{-31}\ \mathrm{kg}$ \\
+Proton : & $q_{p} = e = 1.602.10^{-19} \ \mathrm{C}$ & $m_{p}=1.672.10^{-27}\ \mathrm{kg}$ \\
+Neutron : & $q_{n} = 0 \ \mathrm{C}$ & $m_{p}=1.674.10^{-27}\ \mathrm{kg}$ \\
+\end{tabular}
+\end{center}
+
+$e$ est la \textbf{charge électrique} élémentaire la plus petite qui puisse se manifester à l'échelle atomique. Toutes les valeurs de charges possibles sont ainsi définies comme des multiples de $e$. Les quantités d'électrons et de protons contenues dans un matériau donné déterminent donc sa charge globale, fixe ou variable dans le temps, les électrons pouvant s'échapper plus ou moins librement.
+La charge électrique totale $q$ sera égale à la somme algébrique des charges élémentaires.
+
+\subsubsection{Matériaux isolants et matériaux conducteurs.}
+
+Un matériau est constitué d'un grand nombre de charges électriques. Lorsque la charge totale négative est égale à la charge totale positive, le matériau est dit électriquement neutre. Si des électrons s'échappent ou sont arrachés, la charge globale augmente et devient positive. Si des électrons sont ajoutés, la charge globale diminue et devient négative. Ces phénomènes définissent l'effet d'\textbf{électrisation} des corps.
+
+Un matériau est dit \textbf{conducteur parfait} si, lorsqu'il devient électrisé, les électrons peuvent se déplacer librement dans tout le volume occupé par le matériau. Il sera un \textbf{isolant parfait} (ou \textbf{diélectrique}) si les électrons sont incapables de se déplacer. Mais tous les matériaux ne sont pas totalement conducteurs ou isolants. Leurs propriétés de résistance à l'électrisation ou à la conduction, par les effets de frottement notamment, seront abordées plus loin au chapitre \ref{chap_eleccine}.
+
+\paragraph{Expérience~:}
+Frotter vigoureusement une baguette métallique avec un chiffon, si possible en laine. Si elle est tenue à l'aide d'un matériau isolant, la baguette fini par attirer certains objets légers comme des plumes et de petits morceaux de papier. Le chiffon arrache en effet une certaine quantité d'électrons à la surface de la baguette et l'électrise. En revanche, cette expérience n'a aucun effet si la baguette est tenue à pleine main. Le corps humain est en effet conducteur et donne les électrons manquants à la baguette pour rétablir l'équilibre électrostatique.
+
+\subsubsection{Principe de Conservation.}
+
+En électrostatique, la charge totale d'un corps isolé est considérée constante dans le temps. Cette charge est également invariante par changement de repère, contrairement à la masse.
+
+
+\subsection{Loi de Coulomb}
+
+A l'aide d'une balance de torsion, Charles Auguste de Coulomb (1736-1806) a effectué une série de mesures qui lui a permis de déterminer les propriétés de la force électrostatique exercée par une charge ponctuelle $q_{1}$ sur une autre charge ponctuelle $q_{2}$~:\\
+
+\begin{enumerate}
+\item{La force est radiale, c'est-à-dire, dirigée selon la droite qui joind les deux charges.}
+\item{La force est proportionnelle au produit des charges~: attractive si elles sont de signe opposé, répulsive sinon.}
+\item{La force varie comme l'inverse du carré de la distance entre les deux charges.}
+\end{enumerate}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 11cm 24cm 22cm,scale=0.3]{./figures/loi_de_coulomb.pdf}
+\caption{Force de Coulomb exercée sur $q_{2}$ par $q_{1}$ (ici, les deux charges sont de mêmes signes).}
+\end{center}
+\end{figure}
+
+L'expression mathématique moderne de la force de Coulomb traduisant ces propriétés est la suivante~:
+
+\begin{equation}\label{coulomb}
+\boxed{\vec{F}_{12}=\frac{1}{4\pi\varepsilon_{0}}\frac{q_{1}q_{2}}{r^{2}}\vec {u}}
+\end{equation}
+
+où $\vec{u}$ est le vecteur unitaire parallèle à l'axe créé par les 2 charges et $\varepsilon_{0}=8,854187.10^{-12}\ \mathrm{F.m^{-1}}$ est la permittivité du vide exprimée en Farad/mètre, \cad en $\mathrm{C^2.N^{-1}.m^{-2}}$. Ainsi, $\fractext{1}{4\pi\varepsilon_{0}}\approx 9.10^{9}\ \mathrm{N.m^{2}.C^{-2}}$.
+
+\paragraph{Validité de la loi de Coulomb.}
+Cette expression n'est valable que dans le vide, pour des charges immobiles (approximation de l'électrostatique) et pour des distances supérieures à $10^{-14}\ \mathrm{m}$. Pour des distances plus faibles, les particules ne peuvent plus être considérées ponctuelles.\\
+
+La force électrostatique est à bien différencier de la force gravitationnelle. Alors que la premiere dépend de la charge électrique de chaque particule, la seconde dépend uniquement de leur masse comme le montre la définition suivante.
+
+\begin{defi}[Loi de gravitation universelle]
+Soient $m_A$ et $m_B$ deux masses ponctuelles situées respectivement dans l'espace au points $A$ et $B$. La masse $m_A$ exerce spontanément une force d'attraction sur la masse $m_B$ telle que: .
+
+\begin{equation}
+\boxed{\vec{F}_{AB}=-G\frac{m_{A}m_{B}}{r^{2}}\vec{u}}
+\end{equation}
+
+où $G=6.67 \ 10^{-11} \ N.m^{2}.kg^{-2}$ est la constante d'attraction universelle, $r=\Vert \overrightarrow{AB}\Vert$ et $\vec{u}=\overrightarrow{AB}/r$. Les valeurs de $m_A$ et $m_B$ étant toujours positives, la force d'attraction est toujours attractive. On remarque que la masse $m_B$ exerce une force d'attraction opposée à $\vec{F}_{AB}$ : $\vec{F}_{BA}=-\vec{F}_{AB}$.
+\end{defi}
+
+\begin{rem}
+Pour comparer l'influence des deux forces, calculons le rapport de la norme de la force électrostatique $\Vert \vec{F}_{E} \Vert$ et de la norme de la force gravitationnelle $\Vert \vec{F}_{G} \Vert$ intervenant entre deux protons ($m_{p}=1.6725 \ 10^{-27} \ kg$ et $q_p=1.6 \ 10^{-19} \ C$) :
+
+$$\frac{F_E}{F_G}=1.24 \ 10^{36}.$$
+
+Les forces électriques sont classées dans les intéractions fortes. Au niveau atomique, les forces de gravitation sont négligeables devant les forces électriques.
+\end{rem}
+
+\begin{bnote}[Pourquoi protons et électrons ne se collent-ils pas l'un contre l'autre ?]
+%\bold{Pourquoi protons et électrons ne se collent-ils pas ensembles ?}\\
+$\ $
+\begin{itemize}
+\item il existe d'autres forces à l'échelle quantique : les forces nucléaires sont plus fortes que les forces électriques, mais décroissent plus rapidement (cohésion des noyaux);
+\item les électrons tournent autour du noyau composé de neutrons et de protons et changent régulièrement d'orbite lorsqu'on leur apporte de l'énergie;
+\item l'effet quantique lié au principe d'incertitude.
+\end{itemize}
+\end{bnote}
+
+
+\subsection{Champ électrostatique créé par une charge ponctuelle}
+
+Soit une charge $q$ située en un point $O$ de l'espace et $M$ un point quelconque de l'espace. La présence de $q$ en $O$ modifie les propriétés électriques dans tout l'espace, notamment en $M$. On décrit cet effet par l'existence d'un champ vectoriel $\vec{E}_1$ qui est le champ électrostatique issu de la loi de Coulomb et produit par la charge $q$.
+
+\begin{defi}
+Une particule de charge $q$ située au point $O$ créé en tout point $M$ de l'espace distinct de $O$ un champ vectoriel $\vec{E}(M)$ appelé champ électrostatique et d'unité le Volt/mètre ($V.m^{-1}$) dépendant de $r=\Vert\overrightarrow{OM}\Vert$ tel que :
+\begin{equation}
+\vec{E}(M)=\frac{1}{4\pi\varepsilon_{0}}\frac{q}{r^{2}}\vec{u}.
+\end{equation}
+\end{defi}
+
+On peut ainsi réécrire l'équation \ref{coulomb} sous la forme:
+
+\begin{equation}
+\vec{F}_{12}=q_{2}\vec{E}_1,
+\end{equation}
+
+avec
+
+$$\vec{E}_1=\frac{1}{4\pi\varepsilon_{0}}\frac{q_1}{r^{2}}\vec{u}.$$
+
+L'intérêt de cette séparation vient du fait que l'on distingue clairement ce qui dépend uniquement de la particule qui subit la force (en $q_{2}$ dans l'exemple) de ce qui ne dépend que d'une source extérieure (le vecteur $\vec{E}_{1}$ dans l'exemple).
+
+
+\subsection{Principe de superposition}\label{princ_superpo}
+
+Si il y a plus de deux charges en présence, la force exercée sur une des charges est la somme vectorielle des forces de Coulomb exercées par chacune des autres charges. Ainsi, dans le cas d'un nuaga de charges ponctuelles,  le champ électrostatique au point quelconque $M$ s'écrit:
+
+\begin{equation}
+\boxed{\vec{E}(M)=\sum_{i=1}^n \frac{1}{4\pi\varepsilon_{0}}\frac{q_{i}}{r_{i}^{2}}\vec {u}_{i}.}
+\end{equation}
+
+\noindent où $n$ est le nombre de particules.
+
+En pratique, cette expression est rarement utilisable car les matériaux comportent un nombre gigantesque de particules. Considèrant que les échelles spatiales sont très grandes devant les distances inter-particulaires, on perd alors toute possibilité de distinguer une particule d'une autre. Il est donc souvent plus habile d'utiliser des distributions continues de charges.
+
+
+\subsection{Distributions continues de charges}
+
+Soit $P$ un point quelconque d'un espace conducteur $D$ et $\ud q$ la charge élémentaire concentrée en ce point. Le champ électrostatique total créé en un point $M$ de l'espace par cette distribution de charge s'écrit~:
+
+\begin{equation}
+\boxed{\vec{E}(M)=\int_{D} \vec{\ud E}(M) \qquad \textrm{avec} \qquad \vec{\ud E}(M)=\frac{1}{4\pi\varepsilon_{0}}\frac{\ud q}{r^{2}}\vec {u}.}
+\end{equation}
+
+On a également posé $r=\Vert \overrightarrow{PM} \Vert$ et $\overrightarrow{PM}=r\vec{u}$. Il s'agit évidemment d'une approximation, permettant de remplacer une somme presque infinie par une intégrale.
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 9cm 24cm 22cm,scale=0.3]{./figures/distribution_continue_de_charges.pdf}
+\caption{Géométrie du problème de la distribution continue de charges.}
+\end{center}
+\end{figure}
+
+On définit $\rho =\fractext{\ud q}{\ud V}$ comme étant la \bold{densité volumique de charges} dans l'élément de volume $\ud V$  (unité~: $\mathrm{C.m^{-3}}$). Le champ électrostatique créé par une telle distribution dans l'ensemble du volume $V$ est donc~:
+
+\begin{equation}
+\vec{E}(M)=\iiint_{V} \frac{1}{4\pi\varepsilon_{0}}\frac{\rho}{r^{2}}\vec {u} \,\ud V.
+\end{equation}
+
+Lorsque l'une des dimensions de la distribution de charges est beaucoup plus petite que les deux autres, (ex~: un plan ou une sphère creuse), on peut généralement faire une intégration sur deux dimensions. On définit alors la \bold{densité surfacique de charges} $\sigma  =\fractext{\ud q}{\ud S}$ dans l'élément de surface $\ud S$ (unité~: $\mathrm{C.m^{-2}}$) et le champ total sur la surface $S$ devient :
+
+\begin{equation}
+\vec{E}(M)=\iint_{S} \frac{1}{4\pi\varepsilon_{0}}\frac{\sigma}{r^{2}}\vec {u} \,\ud S.
+\end{equation}
+
+Enfin, si deux des dimensions de la distribution sont négligeables devant la troisième (ex~: un fil), on peut définir une \bold{densité linéique de charges} $\lambda   =\fractext{\ud q}{\ud l}$ dans l'élement de longueur $\ud l$ (unité~: $\mathrm{C.m^{-1}}$) et le champ total sur la longueur $L$ s'écrit~:
+
+\begin{equation}
+\vec{E}(M)=\int_{L} \frac{1}{4\pi\varepsilon_{0}}\frac{\lambda}{r^{2}}\vec {u} \,\ud l.
+\end{equation}
+
+\subsection{Représentation des champs}
+
+Les équations précédentes ont montré qu'on peut calculer un vecteur champ électrique dans n'importe quel cas de distribution de charges. Pour représenter ce champ, on utilise les lignes de champs qui sont sont tangentes à la direction du vecteur en chaque point de l'espace. Plus le champ est fort, plus les lignes sont serrées. De même, plus le champ est faible, plus les lignes sont espacées. Les lignes de champs ne se coupent pas et partent des charges positives (ou de l'infini) pour aboutir aux charges négatives (ou à l'infini). On y ajoute des flèches pour rappeler le sens du champ comme le montre l'exemple à la figure \ref{lignes_champ}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 17cm 17cm 27cm,scale=0.4]{./figures/lignes_de_champ.pdf}
+\caption{Exemple d'un tracé de lignes de champ entre des charges ponctuelles positives et négatives.}
+\end{center}\label{lignes_champ}
+\end{figure}
+
+
+\section{Etude du champ électrique}
+
+\subsection{Notion d'angle solide}
+La notion d'angle solide est l'extension naturelle dans l'espace de la notion d'angle définie dans un plan. Dans un espace à 3 dimensions, l'oeil regarde par exemple tous les objets selon un angle solide mais ne voit finalement qu'une surface projetée. De même lors d'une prise de vue photographique : pour une même surface de projection, l'angle réel percu par l'objectif est variable et dépend de sa distance focale. Dans ce cas précis, plus la focale est petite, plus l'angle solide perçu est grand. C'est en modifiant cet angle solide qu'on produit l'effet << zoom >>.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 16cm 22cm 25cm,scale=0.4]{./figures/angle_solide.pdf}
+\caption{Schéma représentatif d'un angle solide.}
+\end{center}
+\end{figure}
+
+\begin{defi}
+L'angle solide élémentaire $\ud \Omega$, délimité par un cône coupant un élément de surface $\ud S$ située à une distance $r$ de son sommet $O$ vaut~:
+\begin{equation}\label{angle_solide}
+\boxed{\ud \Omega =\frac{\ud S}{r^{2}}.}
+\end{equation}
+Cet angle solide est toujours positif et son unité est le `stéradian' (sr).
+\end{defi}
+
+En coordonnées sphériques, la surface élémentaire à $r$ constant vaut $\ud S=r^{2}\sin{\vartheta } \ud \vartheta \ud \varphi $. L'angle solide élémentaire s'écrit alors $\ud \Omega =\sin {\vartheta } \ud \vartheta  \ud \varphi$. Ainsi, l'angle solide délimité par un cône de révolution, d'angle au sommet $\alpha $ vaut~:
+
+\begin{equation}
+	\Omega =\int \ud \Omega =\int_{0}^{2\pi } \ud \varphi \int_{0}^{\alpha } \sin{\vartheta } \ud \vartheta =2\pi (1-\cos{\alpha} ).
+\end{equation}
+
+Le demi-espace, engendré avec $\alpha =$ \fract $\pi$/2 radians, correspond donc à un angle solide de $2\pi$ stéradians, tandis que l'espace entier correspond à un angle solide de $4\pi$ $(\alpha =\pi )$. On remarque que l'angle solide calculé ne dépend pas de $r$.
+
+Dans le cas général, le cône peut intercepter une surface quelconque dont la normale $\vec{n}$ fait un angle $\vartheta $ avec la génératrice de vecteur directeur $\vec{u}$. L'angle solide élémentaire est alors défini par~:
+
+$$\ud \Omega = \frac{\vec{\ud S}\cdot \vec{u}}{r^{2}}=\frac{\ud S \, \vec {n} \cdot \vec {u}}{r^{2}}=\frac{\ud S \cos\vartheta }{r^{2}}$$
+
+On en déduit :
+
+\begin{equation}
+	\ud \Omega=\frac{\ud S'}{r^{2}}
+\end{equation}
+
+\noindent où $\ud S'$ est la surface effective qui, par exemple, serait vue par un observateur situé en $O$.
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=8cm 15cm 21cm 24cm,scale=0.3]{./figures/angle_solide_gene.pdf}
+\caption{Géométrie liée au calcul d'un angle solide quelconque.}
+\end{center}
+\end{figure}
+
+\subsection{Caractérisation des champs de vecteur~: le flux}
+\subsubsection{A travers un élément de surface}
+
+\begin{defi}[Flux élémentaire]
+On appelle flux élémentaire d'un vecteur $\vec{E}$ à travers une surface $\vec{\ud S}$ la quantité~:
+$$\ud \Phi =\vec{E} \cdot  \vec {\ud S}=E \, \ud S \, \cos{\alpha}=\frac{1}{4\pi\varepsilon_{0}}\frac{q}{r^{2}} \ud S \cos{\alpha}, $$
+
+d'où :
+
+\begin{equation}
+	\boxed{\ud \Phi=\frac{1}{4\pi\varepsilon_{0}}q\ \ud\Omega.}
+\end{equation}
+\end{defi}
+
+\begin{rem}[Analogie]
+Si le vecteur $\vec{E}$ était une vitesse, le flux représenterait un débit volumique.
+\end{rem}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 17.5cm 15cm 27.5cm,scale=0.35]{./figures/flux_elementaire.pdf}
+\caption{Géométrie pour le calcul d'un flux élémentaire passant à travers une surface élémentaire.}
+\end{center}
+\end{figure}
+
+\begin{rem}[Surface orientée]
+Le signe dépend de l'orientation de la normale \cad de $\cos \alpha$. Par la suite et par convention, nous choisirons l'orientation de $\vec{\ud S}$ dirigée vers l'extérieur de la surface $S$. Ainsi, pour $q>0$, le champ $\vec{E}$ est dirigé dans le même sens que $\vec{n}$ et l'on obtient un flux positif.
+\end{rem}
+
+\subsubsection{Théorème de Gauss}
+
+Le flux à travers une surface quelconque est égal à la somme des flux élémentaires~:
+
+\begin{equation}\label{flux_tot}
+\begin{split}
+\Phi = \int_{Dist.} \ud \Phi & =\iint_{S} \vec{E} \cdot \vec{\ud S} \\
+& = \iint_{S} \frac{1}{4\pi\varepsilon_{0}} q \, \ud \Omega
+\end{split}
+\end{equation}
+
+Prenons une charge $q$ à l'intérieur d'une surface fermée.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 11cm 20cm 25cm,scale=0.38]{./figures/flux_surface.pdf}
+\caption{Flux à travers une surface.}
+\end{center}
+\end{figure}
+
+
+En intégrant l'équation \ref{flux_tot} selon toutes les directions (c'est-à-dire sur les $4\pi$ stéradians), on obtient le flux total suivant:
+
+$$\Phi = \frac{q}{\varepsilon_{0}}$$
+
+En vertu du principe de superposition, ce résultat se généralise aisément à un ensemble quelconque de charges.
+
+\begin{defi}[Théorème de Gauss]
+Le flux du champ électrique à travers une surface fermée orientée quelconque est égal au produit de la charge électrique contenue à l'intérieur de cette surface et de la constante $1/ \varepsilon_{0}$:
+\begin{equation}\label{gauss}
+ \boxed{\Phi = \iint_{S} \vec{E} \cdot \vec{\ud S} = \frac{Q_{int}}{\varepsilon_{0}}}
+\end{equation}
+\end{defi}
+
+
+\subsection{Applications}
+
+Le théorème de Gauss fournit une méthode très utile et performante pour calculer le champ $\vec{E}$ lorsque celui-ci possède des propriétés particulières de symétrie. Celles-ci permettent en effet de simplifier le calcul du flux $\Phi $. Comme le théorème de Gauss est valable sur une surface quelconque, il nous suffit de trouver une surface $S$ adaptée, c'est-à-dire respectant les propriétés de symétrie du champ, appelée \textbf{surface de Gauss}.
+
+\begin{bex}[Champ au voisinage d'un fil infiniement mince, uniformément chargé]
+A voir en TD
+\end{bex}
+
+\begin{bex}[Champ au voisinage d'une plaque infinie, uniformément chargée]
+A voir en TD
+\end{bex}
+
+\begin{bex}[Champ au voisinage d'une boule uniformément chargée de rayon $R$]
+A voir en TD
+\end{bex}
+
+
+\section{Potentiel}
+
+\subsection{Notion de potentiel électrostatique}
+
+Nous avons vu qu'il fallait calculer 3 composantes pour obtenir $\vec{E}$. Ces composantes peuvent être déduites d'un champ potentiel, \cad scalaire, à l'aide de la fonction vectorielle nommée \textbf{gradient} :
+
+
+\begin{defi}
+ Soit $\vec{E}$ un champ électrostatique quelconque. $\vec{E}$ dérive du potentiel électrostatique $V$ tel que:
+\begin{equation}
+\vec{E}=-\grad\ V
+\end{equation}
+\end{defi}
+
+\begin{note}[Historique]
+En fait, depuis Newton (1687) et sa loi de gravitation universelle, de nombreux physiciens et mathématiciens s'étaient penchés sur les propriétés de cette force radiale en 1/$r^{2}$. En particulier Lagrange avait introduit en 1777 une fonction scalaire appelée `potentiel', plus fondamentale puisque la force en dérive. C'est Poisson qui introduit le potentiel électrostatique en 1813, par analogie avec la loi de Newton.
+\end{note}
+
+\begin{note} Le signe moins est une convention liée à celle adoptée pour l'énergie électrostatique.
+\end{note}
+
+\subsection{Vecteur Gradient}
+
+Soit $V(M)$ un scalaire défini en tout point $M$ de l'espace, \cad un \textbf{champ scalaire}. Lorsqu'on passe d'un point $M$ à un point $M'$ infiniment proche, une variation $\ud V$ de ce champ est alors fourni par la différentielle totale suivante~:
+
+$$\ud V(M)=\sum_{i=1}^{3}\frac{\partial V}{\partial x_{i}} \ud x_{i}= \grad\ V \cdot \ud \overrightarrow{OM}$$
+
+\noindent où le vecteur $\grad\ V$ est le gradient du champ scalaire V et constitue un champ de vecteurs défini partout. Ses composantes dans un système de coordonnées donné sont obtenues très simplement. Par exemple, en coordonnées cartésiennes, on a $\overrightarrow{\ud OM} = \ud x \, \vec{i} +  \ud y \, \vec{j} +  \ud z \, \vec{k}$ et~:
+
+$$\ud V = \frac{\partial V}{\partial x} \, \ud x + \frac{\partial V}{\partial y} \, \ud y +\frac{\partial V}{\partial z} \, \ud z $$
+
+\noindent d'où l'expression suivante pour le gradient en coordonnées cartésiennes~:
+
+\begin{equation}\label{grad}
+\grad\ V =
+			\begin{pmatrix} \cfrac{\partial V}{\partial x} \\
+							\\
+							\cfrac{\partial V}{\partial y} \\
+							\\
+							\cfrac{\partial V}{\partial z}
+			\end{pmatrix}
+\end{equation}
+
+En faisant de même en coordonnées cylindriques et sphériques, on obtient respectivement~:
+
+$$
+\grad\ V =
+			\begin{pmatrix} \cfrac{\partial V}{\partial \rho } \\
+							\\
+							\cfrac{1}{\rho }\cfrac{\partial V}{\partial \vartheta } \\
+							\\
+							\cfrac{\partial V}{\partial z}
+			\end{pmatrix}
+\qquad \textrm{et} \qquad
+\grad\ V =
+			\begin{pmatrix} \cfrac{\partial V}{\partial r} \\
+							\\
+							\cfrac{1}{r} \cfrac{\partial V}{\partial \vartheta} \\
+							\\
+							\cfrac{1}{r \sin{\vartheta }}\cfrac{\partial V}{\partial \varphi }
+			\end{pmatrix}
+.$$
+
+\subsection{Circulation du vecteur $\vec{E}$}
+
+Le potentiel est lié au travail accompli pour transférer une charge d'un point à un autre. De manière analogue au travail d'une force, on définit la circulation $\mathcal{C}$ de $\vec{E}$ le long de la courbe $(AB)$ par l'équation :
+
+$$ \mathcal{C}=\int_{A}^{B} \vec{E} \cdot \vec{\ud l}$$
+
+Ainsi,
+
+\begin{equation*}
+\begin{split}
+\mathcal{C} & =\int_{A}^{B} \frac{q}{4 \pi \varepsilon_{0}} \frac{\vec{\ud l} \cdot \vec{u}}{r^{2}} \\
+& =\int_{A}^{B} \frac{q}{4 \pi \varepsilon_{0}} \frac{\ud r}{r^{2}} \\
+& = - \frac{q}{4 \pi \varepsilon_{0}} \biggl[ \frac{1}{r} \biggr]_{A}^{B} \\
+& = \frac{q}{4 \pi \varepsilon_{0}r_{A}} - \frac{q}{4 \pi \varepsilon_{0}r_{B}} \\
+& = V_{A} - V_{B}
+\end{split}
+\end{equation*}
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 8cm 19cm 25cm,scale=0.38]{./figures/circulation.pdf}
+\caption{Calcul de la circulation entre le point A et B.}
+\end{center}
+\end{figure}
+
+\begin{brems}
+\mbox{}
+\begin{itemize}
+\item La circulation de $\vec{E}$ le long de AB ne dépend pas de la trajectoire, mais d'une différence de potentiel;
+\item la circulation de $\vec{E}$ sur une courbe fermée est nulle.
+\end{itemize}
+\end{brems}
+
+
+\subsection{Potentiel créé par une charge ponctuelle}
+
+Considérons une charge ponctuelle $q$ située en un point $O$. En tout point $M$ de l'espace, cette charge crée un champ électrostatique $\vec{E}$ et le potentiel électrostatique s'écrit~:
+
+$$\ud V(M)=- \vec{E} \cdot \overrightarrow{\ud l}=- \frac{q}{4 \pi \varepsilon_{0}} \frac{\vec{u}\cdot \vec{\ud r}}{r^{2}}$$
+
+On en déduit :
+
+\begin{equation}
+\boxed{\ud V(M)=-\frac{q}{4 \pi \varepsilon_{0}} \frac{\ud r}{r^{2}}}
+\end{equation}
+
+En intégrant selon $r$ et en posant $V_0$ comme la charge le potentiel créé par la charge en $O$, on obtient:
+
+\begin{equation}
+V(M) = \frac{1}{4 \pi \varepsilon_{0}} \frac{q}{r} + V_{0}
+\end{equation}
+
+\begin{conventions}
+\mbox{}
+\begin{itemize}
+\item La constante d'intégration est généralement choisie nulle (le potentiel s'annule à l'infini) ;
+\item V est un scalaire exprimé en Volt (V) ;
+\item V croît des charges $(-)$ aux charges $(+)$ (sens de croissance de V opposé à $\vec{E}$) ;
+\item Les surfaces de potentiel constant sont appelées équipotentielles ;
+\end{itemize}
+\end{conventions}
+
+\subsection{Potentiel créé par un ensemble de charges (principe de superposition)}
+
+Nous avons vu dans le chapitre précédent que le champ électrique créé par une distribution de charges était égal à la somme vectorielle des champs électriques créés par chacune de ces charges. De même, le potentiel électrique créé par une distribution de charges est égal à la somme algébrique des potentiels électriques créés par chacune de ces charges. Cette propriété découle de la propriété de dérivation d'une somme qui est simplement égale à la somme des dérivées. En utilisant l'expression du potentiel créé par une charge unique, on a ainsi~:
+
+\begin{equation}
+ \boxed{V(M) = \sum_{i=1}^{n} \frac{1}{4 \pi \varepsilon_{0}} \frac{q_i}{r_i}}
+\end{equation}
+
+\noindent où $r_{i}$ est la distance entre la charge $q_{i}$ et le point $M$.
+
+Lorsque l'on s'intéresse à des échelles spatiales qui sont très grandes par rapport aux distances entre les charges $q_{i}$, on peut faire un passage à la limite continue et remplacer la somme discrète par une intégrale où $P$ est un point courant autour duquel se trouve une charge élémentaire $\ud q$. Le potentiel électrostatique créé par une distribution de charges continue devient alors~:
+
+\begin{equation}
+\boxed{V(M) = \frac{1}{4 \pi \varepsilon_{0}} \int_{Dist.} \frac{\ud q} {r}}
+\end{equation}
+
+\noindent où $r = PM$ est la distance entre le point $M$ et un point $P$ quelconque de la distribution de charges.
+
+Pour des distributions de charges linéiques $\lambda $, surfacique $\sigma $ et volumique $\rho$, on obtient respectivement~:
+
+$$V(M) = \frac{1}{4 \pi \varepsilon_{0}} \int_{a}^{b} \frac{\lambda \ud l} {r}$$
+
+$$V(M) = \frac{1}{4 \pi \varepsilon_{0}} \int_{S} \frac{\sigma  \ud S} {r}$$
+
+$$V(M) = \frac{1}{4 \pi \varepsilon_{0}} \int_{V} \frac{\rho \ud V} {r}$$
+
+\begin{brems}
+\mbox{}
+\begin{itemize}
+\item Le calcul de $V$ n'implique qu'une seule intégrale alors que $\vec{E}$, en tant que vecteur, en implique plusieurs : celles des composantes. Mais, par définition, un scalaire ne donne pas la même information qu'un vecteur. En effet, la connaissance du potentiel en un point $r$ de l'espace ne permet pas de déterminer à lui seul la force qui s'applique sur la charge $q$. Il est également nécessaire de savoir comment $V$ varie au voisinage de ce point, puisque que c'est à partir des dérivées partielles de $V$ que seront déduites les composantes de $\vec{E}$ et de la force.
+\item Les champs et potentiels électriques ont été exprimés dans le cas où les charges sont dans le \emph{vide}. On a utilisée la constante $\varepsilon_{0}$ qui est la permittivité du vide. Dans le cas où un matériau remplace le vide, on doit remplacer $\varepsilon_{0}$ par $\varepsilon$ qui est la permittivité du matériau et qui peut être défini ainsi :
+
+\begin{equation}
+	\boxed{\varepsilon = \varepsilon_0 * \varepsilon_R}
+\end{equation}
+
+\noindent où $\varepsilon_R$ est la \textbf{permittivité relative} ou \textbf{constante diélectrique}. Le tableau \ref{tab_epsilonR} donne les valeurs de $\varepsilon_R$ pour quelques matériaux.
+
+\begin{table}
+				\begin{center}
+				\begin{tabular}{|c|c|} \hline
+				Matériau & Permittivité relative $\varepsilon_R$ \\ \hline \hline
+				Vide & 1 (par définition) 	\\ \hline
+				Air & 1,0005  \\ \hline
+				Papier & 2  \\ \hline
+				Polyester 	& 3,3 \\ \hline
+				Teflon &2,1 \\ \hline
+				PVC &	5 \\ \hline
+				Verre &	5 \\ \hline
+				Bakélite &	6 \\ \hline
+				Chlorure de sodium & 	6.12 \\ \hline
+				Titanate de baryum &	à peu près 1500 \\ \hline
+				\end{tabular}
+				\end{center}
+				\caption{Permittivité relative $\varepsilon_R$ de certains matériaux.}\label{tab_epsilonR}
+\end{table}
+
+\end{itemize}
+\end{brems}
+
+\begin{bnote}[Cartographie]
+Si la topologie d'un champ vectoriel est donnée par les lignes de champ, la topologie d'un champ scalaire est donnée par des courbes de niveau. Nous avons vu que dans le cas d'un potentiel électrique, les courbes de niveau s'appellent les \textbf{équipotentielles}. Elles joignent les points de même potentiel et ont les propriétés suivantes:\\.
+
+\begin{itemize}
+\item les équipotentielles sont des lignes fermées ;
+\item elles entourent les charges ;
+\item le long d'une courbe définie par $V=cste$ correspond à $\ud V = 0$, ce qui signifie que $\grad V$ est un vecteur perpendiculaire en tout point à cette courbe (ligne ou surface).\\
+\end{itemize}
+
+On peut effectuer une analogie avec les cartographies où le relief est représenté par des courbes de niveaux. Ces lignes rejoignent les points situés à la même altitude, \cad les points de même énergie potentielle (cf. l'équation $E_p=\rho g h$). Ce sont des lignes fermées entourant les sommets et les fonds. Elles sont strictement équivalentes aux équipotentielles.
+
+Les lignes équivalentes aux lignes de champ ne sont pas représentées. Pour ce faire, il faut prendre en chaque point la perpendiculaire aux lignes de niveau. Les nouvelles lignes indiquent la direction de la pente au point considéré (sens de l'écoulement de l'eau). Plus les lignes de niveau sont serrées, plus la pente est importante. La pente locale est le pendant du champ électrique.
+
+\end{bnote}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=6.5cm 12cm 13.5cm 17cm,scale=1.1]{./figures/Mbianco.pdf}
+\includegraphics[clip=true,viewport=7cm 12.5cm 13cm 17cm,scale=1.28]{./figures/Mblancign.pdf}
+\caption{Cartographie du mont Blanc (Extraits de la planche de l'Atlas sarde (1854) et IGN TOP 25 3531).}
+\end{center}
+\end{figure}
+
+
+\section{Le condensateur}
+
+\subsection{Charge des conducteurs en équilibre}
+
+Comme il a été vu précedemment, la matière est composée de charges positives, les protons, localisés dans les noyaux des atomes et de charges négatives, les électrons formant le \textbf{nuage électronique} dont l'extention spatial représente la taille de l'atome. Les électrons peuvent être classés en deux groupes : les électrons de couches profondes qui sont fortement liés aux noyaux et les électrons des couches périphériques qui peuvent passer d'un atome à l'autre. Ils établissent ainsi la liaison chimique et assurent la stabilité des molécules ou des solides.
+
+Dans les conducteurs, les électrons sont libres de se déplacer dans l'ensemble du matériau. Les électrons libérés par les atomes sont appelés les électrons libres. La \textbf{valence} d'un métal est égale au nombre d'électrons que libère chacun des atomes. En l'absence de sollicitation électrique extérieure, un métal est électriquement neutre en chacun de ses points (petit volume légèrement supérieur à la taille de l'atome). Localement, il existe alors une compensation entre les charges $+$ appartenant aux ions positifs et les charges $-$ appartenant aux électrons libres.
+
+Si on approche un solide chargé positivement vers un métal non chargé (électriquement neutre), un champ électrique est créé dans le métal. Très rapidement, les électrons libres du métal vont réagir et, animés par la force de Coulomb, vont se déplacer en sens inverse à celui du champ électrique. Les électrons vont donc se diriger vers les charges positives portées par le solide extérieur. Ne pouvant sortir du métal, des électrons vont progressivement s'accumuler sur la face située au voisinage de la charge extérieure positive et créer en ces points une charge négative résultante. A l'inverse, une charge positive résultante va apparaître au voisinage de la face opposée du solide par défaut d'électrons.
+
+Ainsi, les charges résultantes apportent leur contribution au champ électrique à l'intérieur et à l'extérieur au solide. A l'intérieur du métal, ce nouveau champ s'oppose au champ créé par les charges extérieures et réduit le champ électrique total. Les électrons libres ne cesseront leur mouvement de migration que lorsqu'ils ne seront plus soumis à aucune force, c'est-à-dire lorsque le champ électrique total à l'intérieur du métal sera nul. Cette situation est à ne pas confondre avec celle où les extrêmités des conducteurs sont maintenues à des potentiels différents $V_{1}$ et $V_{2}$ (réservoirs de charges positives et négatives) qui  sera vue au chapitre \ref{chap_eleccine} qui concerne l'électrocinétique.
+
+\begin{rem}
+Les charges semblent donc s'accumuler vers les surfaces. On montre qu'effectivement que, à l'équilibre, les charges électriques portées par un métal sont exclusivement surfaciques (une à deux couches atomiques).
+\end{rem}
+
+
+\subsection{Condensateur plan (armatures rapprochées)}
+
+Nous avons vu en exercice le calcul du champ électrique dans le cas d'une plaque chargée infinie. Le figure \ref{plaq_char_inf} en présente une description.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 16.5cm 20cm 25cm,scale=0.38]{./figures/plaque_chargee.pdf}
+\caption{Champ électrique généré par une plaque chargée infinie.}\label{plaq_char_inf}
+\end{center}
+\end{figure}
+
+Ce champ ne dépend pas de la distance à la plaque et vaut~:
+\begin{equation}\label{champ_cond_plan}
+\vec {E} = \frac{\sigma }{2\varepsilon_{0}} \, \vec{n}
+\end{equation}
+
+Soient deux armatures $(A_{1})$ et $(A_{2})$ planes parallèles infinies, situées à une distance $d$ l'une de l'autre. L'armature $(A_{1})$ porte une densité surfacique de charge $\sigma $ et $(A_{2})$ porte une densité $-\sigma $. Selon le principe de superposition vu à la section \ref{princ_superpo}, le champ électrostatique entre les deux armatures est égal à la superposition des champs créés par ces deux plans infinis (voir figure \ref{2_plaq}).
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 9cm 20cm 27cm,scale=0.33]{./figures/deux_plaques_chargees.pdf}
+\caption{Champ électrique généré par deux plaques chargées infinies.}\label{2_plaq}
+\end{center}
+\end{figure}
+
+Ainsi,
+
+\begin{equation}
+\vec{E}(M_{1})=\vec{E}(M_{2})=0 \qquad \textrm{et} \qquad
+\vec{E}(M_{0})=\vec{E_{A_{1}}} + \vec{E_{A_{2}}} = \frac{\sigma }{2\varepsilon_{0}}\vec{i} + \frac{-\sigma }{2\varepsilon_{0}} \, -\vec{i} = \frac{\sigma }{\varepsilon_{0}} \, \vec{i}.
+\end{equation}
+
+La capacité $C$ d'un condensateur est le rapport de sa charge $Q$ et de la tension $U$ appliquée à ses bornes tel que :
+
+\begin{equation}
+ C=\frac{Q}{U}
+\end{equation}
+
+où $U$ est donc la différence de potentiel (ou circulation) entre les deux armatures telle que :
+
+$$U = V_{1} - V_{2} = \int_{x_{1}}^{x_{2}} \vec{E}\cdot \vec{\ud x}=\frac{\sigma }{\varepsilon_{0}} \, d.$$
+
+Puisque $Q=\sigma S$, $S$ étant la surface de la plaque finie du condensateur, et $Q=CU$, on peut déduire la capacité $C$ du condensateur~:
+
+\begin{equation}\label{capac_cond}
+\boxed{C=\frac{\varepsilon_{0} \, S}{d}.}
+\end{equation}
+
+Pour obtenir une grande capacité, il faut $S$ grand et/ou $d$ petit.
+
+\begin{rem}[Effets de bords]
+Les plaques d'un condensateur ne sont pas infinies, et le champ $\vec{E}$ n'est pas brusquement nul sur les bords. La valeur réelle de $C$ est donc un peu plus élevée que la valeur théorique. On corrige alors la surface $S$ telle que la plaque soit augmentée d'une longueur égale à $\fractext{3}{8}d$.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 19cm 20cm 23cm,scale=0.38]{./figures/Effets_de_bords.pdf}
+\caption{Effets de bords.}
+\end{center}
+\end{figure}
+\end{rem}
+
+\begin{rem}[Unité]
+L'unité de la capacité électrique est le Farad (Coulomb/Volt). Ceci donne une unité pour la permittivité en $\mathrm{Fm^{-1}}$. Les valeurs typiques de capacité vont de $1\ \mathrm{pF}$ à quelques mF. Par exemple, si $S=1 \, \mathrm{cm^{2}}$ et $d=1\ \mathrm{mm}$, on a $C \approx 1 \mu \mathrm{F}$.
+\end{rem}
+
+\begin{bex}[Condensateur sphérique]
+A voir en TD
+\end{bex}
+
+\begin{bex}[Condensateur cylindrique]
+A voir en TD
+\end{bex}
+
+\subsection{Condensateur en présence d'un diélectrique}
+
+\paragraph{Expérience de Faraday.}La capacité d'un condensateur augmente si on introduit un isolant entre ses plaques. Si l'isolant remplit tout l'espace inter-plaque, la capacité est multipliée par $\varepsilon_{r}$ qui ne dépend que de la nature de l'isolant (ou diélectrique).
+
+Dans les isolants, les électrons des couches externes forment des \textbf{liaisons covalentes}, \textbf{ioniques} ou plus généralement \textbf{ionocovalentes}. Dans ce type de liaison, un électron ne s'éloigne jamais de l'atome dont il est issu, tout au plus s'en écarte-t-il pour atteindre les premiers atomes voisins. Chaque électron reste localisé dans une région très restreinte de l'espace. Il n'est donc pas mobile.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 15cm 20cm 23cm,scale=0.38]{./figures/polarisation_dielectrique.pdf}
+\caption{Polarisation du diélectrique.}
+\end{center}
+\end{figure}
+
+
+La \textbf{polarisation du diélectrique} s'écrit~:
+\begin{equation}\label{pola_dielec}
+ \vec{P}=\varepsilon_{0} \chi \vec{E}
+\end{equation}polarisation du diélectrique
+\noindent où $\chi$ est la \textbf{suceptibilité diélectrique}. D'autre part on a:
+\begin{equation}
+ \vec{E}= \frac{\sigma - P}{\varepsilon_{0}} \, \vec{dir}_{E}.
+\end{equation}
+Cette dernière équation conduit à un champ électrique diminué tel que:
+\begin{equation}
+ E=\frac{\sigma }{(1+\chi)\varepsilon_{0}}.
+\end{equation}
+
+On appelle respectivement \textbf{permittivité absolue} et \textbf{permittivité relative} du diélectrique les grandeurs (cf. tableau \ref{tab_epsilonR}):
+$$\varepsilon =\varepsilon_{r} \varepsilon_{0}
+\qquad \textrm{et} \qquad
+\varepsilon_{r} =1+\chi.$$
+
+La différence de potentiel entre ses bornes s'écrit donc~:
+\begin{equation*}
+\begin{split}
+U = V_{1} - V_{2} & = \int_{x_{1}}^{x_{2}} \vec{E}\cdot \vec{\ud x} \\
+& = Ed \\
+& = \frac{\sigma \,d}{\varepsilon_{r}\varepsilon_{0}} \\
+& = \frac{Q}{C^{\prime} }
+\end{split}
+\end{equation*}
+
+\noindent où l'on a posé $C^{\prime} = \fractext{\varepsilon_{r}\varepsilon_{0}\ S}{d}$.
+
+\begin{rem}[Ordre de grandeur]
+\mbox{}
+$\varepsilon_{r}=1$ dans le vide ;
+$\varepsilon_{r}=1.0001$ dans l'air ;
+$\varepsilon_{r}=4$ à $7$ du verre ;
+$\varepsilon_{r}=80$ dans l'eau pure ;
+$\varepsilon_{r}=1000$ dans certains cristaux. Au delà d'un certain potentiel, les diélectriques peuvent conduire le courant (tension de claquage marqué sur les condensateurs). Le diélectrique est alors en parti détruit. (Voir aussi tableau \ref{tab_epsilonR}).
+\end{rem}
+
+
+\subsection{Association des condensateurs}
+
+\subsubsection{En parallèle}
+
+Le potentiel est identique aux bornes de chaque condensateur. Les charges s'additionnent donc et on obtient:
+
+$$Q_{1}=UC_{1} \quad Q_{2}=UC_{2} \quad \cdots \quad Q_{n}=UC_{n}$$
+$$Q_{E}=\sum_{i=1}^{n}Q_{i}=U \sum_{i=1}^{n}C_{i}$$
+\begin{equation}\label{cond_parall}
+ \boxed{C_{E}=\sum_{i=1}^{n}C_{i}}
+\end{equation}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 14cm 20cm 24.5cm,scale=0.38]{./figures/association_C_parallele.pdf}
+\caption{Association de condensateurs en parallèle.}
+\end{center}
+\end{figure}
+
+\subsubsection{En série}
+
+La charge est identique dans chaque condensateur. Les tensions s'additionnent, d'où~:
+
+$$U_{1}=\frac{Q}{C_{1}} \quad U_{2}=\frac{Q}{C_{2}} \quad \cdots \quad U_{n}=\frac{Q}{C_{n}}$$
+$$U_{E}=\sum_{i=1}^{n}U_{i}=Q \sum_{i=1}^{n} \frac{1}{C_{i}}$$
+\begin{equation}\label{cond_serie}
+ \boxed{\frac{1}{C_{E}}=\sum_{i=1}^{n} \frac{1}{C_{i}}}
+\end{equation}
+
+\begin{figure}[ht]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 13cm 20cm 19cm,scale=0.38]{./figures/association_C_serie.pdf}
+\caption{Association de condensateurs en série.}
+\end{center}
+\end{figure}
+
+%\subsection{Energie emmagasinée par un condensateur}
+
+\subsection{Notions sur les électrets}
+
+Un \textbf{électret} est un matériau suceptible de conserver en permanence une polarisation électrique, même en absence de champ électrique.
+
+Exemple de matériaux : Téflon, Mylar (TM).
+
+Exemple d'utilisation : microphones à condensateur sans avoir besoin de tension continue de polarisation (miniaturisation).
+
+Mode de fabrication : bombardement d'électrons ou d'ions pour soumettre le diélectrique à l'action d'un champ électrique intense. Ces matériaux génèrent un champ électrique constant même après l'arrêt du bombardement (analogie avec les aimants).
+

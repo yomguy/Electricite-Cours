@@ -1,0 +1,615 @@
+
+\section{Rappels}
+\subsection{Mobilité des charges~: courant électrique}
+
+Soit deux conducteurs $A$ et $B$ isolés en équilibre avec $V_{A} > V_{B}$ (voir figure \ref{cond_charge}). $A$ possède en excès des charges positives et $B$ possède en excès des charges négatives.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 17cm 20cm 25cm,scale=0.38]{./figures/Conducteurs_charges.pdf}
+\caption{Conducteurs chargés isolés en équilibre.}\label{cond_charge}
+\end{center}
+\end{figure}
+
+Si on relie les deux conducteurs par un fil également conducteur, il y a un transfert de charge pour que tout point soit au même potentiel. Ensuite, $A$ et $B$ sont au même potentiel, le champ électrique s'annule alors ainsi que le courant.
+
+Le déplacement des électrons libres est quasiment instantané (régime transitoire). Supposons que le précédent conducteur isolé $B$ soit un réservoir d'électrons libres, c'est-à-dire que l'on arrive à maintenir son potentiel $V_{B}$. Si on fait en sorte que les électrons excédentaires du conducteur $A$ quittent le matériau pour maintenir le potentiel $V_{A}$, le champ électrique initial est rétabli et le déplacement des électrons à l'intérieur du fil conducteur est entretenu. Le champ $\vec{E}$ qui assure le déplacement des électrons et la circulation du courant est appelé \textbf{champ électromoteur}.
+
+\subsection {Densité de courant électrique}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 18cm 20cm 27cm,scale=0.38]{./figures/densite_de_courant.pdf}
+\caption{Paramétrisation d'un élément de fil pour le calcul du courant.}\label{sch_cour}
+\end{center}
+\end{figure}
+
+Le courant est produit par un déplacement organisé de charges, à une certaine vitesse. Considérons un fil conducteur de section $S$, dans lequel se trouve une densité de charge volumique $\rho$, animé d'une vitesse $\vec{v}$ (cf. figure \ref{sch_cour}). Pendant un instant $\ud t$, ces charges parcourent une distance $\vec{v} \ud t$. Soit $\vec{n} \ud S$ un élément infinitésimal de surface mesurée sur la section du fil, orienté dans une direction arbitraire. La quantité de charge électrique qui traverse cette surface pendant $\ud t$ est celle contenue dans le volume élémentaire $\ud V$ associé et s'écrit~:
+
+$$\ud Q = \rho \ud V = \rho \vec{v} \ud t \cdot \vec{n} \ud S$$
+
+On voit alors apparaître un vecteur qui décrit les caractéristiques du milieu conducteur et qu'on appelle la \textbf{densité de courant}~:
+
+$$\vec{j} = \rho \vec{v}$$
+
+exprimé en Ampères par mètre carré ($\mathrm{A.m^{-2}}$).
+
+Le courant $dI$ circulant dans la portion de fil est la charge traversant la section, et est relié à la densité tel que~:
+
+$$\ud I = \frac{\ud Q}{\ud t}$$
+
+On en déduit :
+
+$$I = \frac{1}{\ud t} \iint_{S} \ud Q = \frac{1}{\ud t} \iint_{S} \vec{j} \ud t \cdot \vec{n} \ud S$$
+
+soit :
+
+\begin{equation}
+\boxed{I = \iint_{S} \vec{j} \cdot \vec{n} \ud S}
+\end{equation}
+
+On avait définit le flux du champ électrique~: $\Phi = \iint_{S} \vec{E} \cdot \vec{n} \ud S$. De même, $I$ est le flux de la densité de courant à travers la section du fil. Le sens du courant est donné par le sens du vecteur densité de courant.
+
+\begin{rem}[Convention]
+On suppose que le courant est dû au mouvement des charges positives vers les charges négatives : sens du courant. En fait, ce sont les électrons libres qui se déplacent, mais on conserve la convention pour des raisons historiques.
+\end{rem}
+
+
+\subsection{Loi d'Ohm locale (ou microscopique)}
+
+Dans la plupart des conducteurs, on observe une proportionnalité entre le densité de courant et le champ électrostatique local~:
+
+\begin{equation}
+\boxed{\vec{j}=\gamma \vec{E}},
+\end{equation}
+
+où le c\oe fficient de proportionnalité $\gamma $ est appelé la \textbf{conductivité du milieu}. La conductivité est une grandeur locale positive dépendant uniquement des propriétés du matériau, elle s'exprime en Siemens par mètre et est égale à l'inverse de la résistivité du milieu $\eta = 1/\gamma $. Par exemple, le cuivre possède une conductivité $\gamma_{Cu} = 58.10^{6}\  \mathrm{S.m^{-1}}$, tandis que celle du verre (isolant) est $\gamma_{Cu} = 10^{-11}\ \mathrm{S.m^{-1}}$.
+
+\subsection{Résistance d'un conducteur. Loi d'Ohm}
+
+Considérons maintenant une portion AB d'un conducteur parcouru par un courant $I$. S'il existe un courant $I = \iint_{S} \vec{j} \cdot \vec{n} \ud S$, cela signifie qu'il y a une chute de potentiel entre $A$ et $B$, $U=V_{A} - V_ {B}=\int_{A}^{B} \vec{E} \cdot \vec{\ud l}$. Il existe un scalaire $R$, caractéristique du conducteur, tel que~:
+
+\begin{equation}\label{resist_cond}
+R = \frac{U}{I} = \frac {\int_{A}^{B} \vec{E} \cdot \vec{\ud l}}{\iint_{S} \vec{j} \cdot \vec{n} \ud S} =\frac {\int_{A}^{B} \vec{E} \cdot \vec{\ud l}}{\iint_{S} \gamma  \vec{E} \cdot \vec{n} \ud S},
+\end{equation}
+
+où l'unité est l'Ohm (symbole $\Omega$).
+
+\begin{bex}[Fil cylindrique homogène]
+Dans le cas simple d'un conducteur filiforme de section $S$ où, sur une longueur $L$, le champ électrostatique est uniforme, on obtient le lien entre la résistance d'un conducteur (propriété macroscopique) et sa résistivité (propriété microscopique) tel que :
+
+\begin{equation}\label{resist_fil}
+R = \frac{E L}{\gamma E S}=\eta \frac{L}{S}
+\end{equation}
+
+dont l'unité est le $\Omega.m$ (Ohm mètre).
+\end{bex}
+
+
+\subsection{Association de résistances}
+
+\subsubsection{Résistances en série}
+
+Soient $n$ résistances $R_{i}$ mises bout à bout dans un circuit et parcourues par un courant $I$. La tension aux bornes de la chaîne s'écrit simplement~:
+
+$$U = (V_{0} - V_{1}) + (V_{1} - V_{2}) + \cdots + (V_{n-1} - V_{n})=R_{1} I + R_{2} I+ \cdots + R_{n} I,$$
+
+Le résistance totale est donc analogue à celle obtenue par une résistance unique dont la valeur est~:
+
+\begin{equation}
+\boxed{R = \sum_{i=1}^{n}R_{i}.}
+\end{equation}
+
+\subsubsection{Résistances en parallèle}
+
+Soient $n$ résistances $R_{i}$ branchées en parallèle sous une tension $U = V_{1} - V_{2}$ et alimentées par un courant $I$. Le courant se sépare alors en $n$ courants~:
+
+$$I_{i} = \frac{U}{R_{i}},$$
+
+dans chacune des $n$ branches. Nous avons alors (propriété de conservation du courant)~:
+
+$$I = \sum_{i=1}^{n} I_{i} = \sum_{i=1}^{n} \frac{U}{R_{i}} = \frac{U}{R},$$
+
+c'est-à-dire que l'ensemble des $n$ branches est analogue à une résistance équivalente en série égale à :
+
+\begin{equation}
+\boxed{\frac{1}{R} = \sum_{i=1}^{n} \frac{1}{R_{i}}}
+\end{equation}
+
+
+\section{Eléments d'un circuit électrique}
+
+\subsection{Notion de circuit électrique}
+
+\begin{defi} Un circuit électrique est constitué d'un ensemble de dispositifs appelés \textbf{dipôles}, reliés entre eux par un fil conducteur et formant ainsi une structure fermée. Un \textbf{n\oe ud} d'un circuit est une interconnexion où arrivent 3 fils ou plus. Une \textbf{branche} est un tronçon de circuit situé entre deux n\oe uds. Enfin, une \textbf{maille} est un ensemble de branches formant une boucle fermée.
+\end{defi}
+
+Un \textbf{dipôle} s'insère dans un circuit par l'intermédiaire de deux pôles, l'un par où s'effectue l'entrée du courant (borne $+$), l'autre la sortie (borne $-$). Il est caractérisé par sa réponse à une différence de potentiel $U$ entre ses bornes~: c'est-à-dire la courbe caractéristique $I=f(U)$ qui, pour un dipôle passif, passe par l'origine. Un dipôle actif fournit un courant (positif ou négatif) même en absence de tension. Enfin, on appelle dipôle linéaire tout dipôle dont la courbe est une droite.
+
+Nous avons vu que, dans tout conducteur, la présence d'une résistivité entraîne une variation de tension entre 2 noeuds traversés par le même courant. Les fils électriques reliant les dipôles imposent ainsi leurs résistances propres qui s'ajoutent à la résistance globale du circuit. Dans la majorité des cas d'électronique de puissance, ces résistances internes sont faibles devant celles des dipôles. Les fils sont alors supposés équipotentiels. Cette hypothèse n'est par contre plus valable dans le cas de courants de faible intensité (électronique fine, micro-processeurs, etc...).
+
+\begin{rem}
+Nous nous intéressons ici à des cas où le courant est établi de façon permanente dans le circuit. L'intensité y est alors la même en tout point. Cela exige évidemment que le circuit soit \emph{fermé}.
+\end{rem}
+
+\subsection{Puissance électrique disponible}
+
+Soit une portion $AB$ d'un circuit, parcourue par un courant permanent $I$ allant de $A$ vers $B$. L'existence de ce courant implique que le potentiel en $A$ est supérieur à celui en $B$. Cette différence de potentiel se traduit par l'existence d'un champ électrostatique $\vec{E}$ produisant une force de Coulomb $\vec{F} = q \vec{E}$ capable d'accélérer une charge $q$. Ainsi, soit $P_{q} = \vec{v} \cdot \vec{E}$ la puissance nécessaire pour communiquer une vitesse $\vec{v}$ à une particule de charge $q$ quelconque. Sachant que dans ce conducteur il y a $n$ porteurs de charge par unité de volume, la puissance totale $P$ mise en jeu dans le brin $AB$ parcouru par un courant $I$ s'écrit~:
+
+\begin{equation*}
+\begin{split}
+P & = \iiint_{brin AB} nP_{q}\ \ud V \\
+& = \int_{A}^{B} \iint_{Section} (nq\vec{v} \cdot \vec{dS}) \vec{E} \cdot \vec{\ud l} \\
+& = \int_{A}^{B} \vec{E} \cdot \vec{\ud l} \iint_{Section} \vec{j} \cdot \vec{\ud S} \\
+& = I \int_{A}^{B} \vec{E} \cdot \vec{\ud l} = I [V(A) - V(B)].
+\end{split}
+\end{equation*}
+
+On en déduit:
+
+\begin{equation}
+\boxed{P = UI}
+\end{equation}
+
+où $U = V(A) - V(B) >0$ puisque le courant s'écoule de $A$ vers $B$. Cette puissance est donc la puissance électrique disponible entre $A$ et $B$ du simple fait qu'il y circule un courant $I$.
+
+Suivant la nature du dipôle placé entre $A$ et $B$ (récepteur), l'énergie électrique disponible sera convertie sous une forme ou une autre. Dans le cas simple où entre $A$ et $B$ ne se trouve qu'une résistance $R$, la puissance disponible $P$ ne sert qu'à faire chauffer la résistance puisque $U = RI$. Cela se traduit par une dissipation d'énergie sous forme de chaleur, appelée effet Joule, et dont la puissance vaut~:
+
+\begin{equation}\label{joule}
+\boxed{P_{j}=RI^{2}.}
+\end{equation}
+
+Cette énergie peut être également reconvertie en rayonnement (lampe), énergie mécanique (moteur), chimique (bac à électrolyse).
+
+\begin{rem} Cette puissance peut aussi être négative lorsque $U = V(A) - V(B) <0$. Le dipôle fournit alors de l'énergie, c'est un générateur.
+\end{rem}
+
+\subsection{Nécessité d'une force électromotrice ou fém}
+
+Si on applique le raisonnement précédent à un circuit fermé, c'est-à-dire si l'on regarde la puissance totale fournie entre $A$ et $B$ par la force de Coulomb, on obtient~:
+
+$$P=I[V(A)-V(A)]=0,$$
+
+c'est-à-dire une puissance nulle. Cela signifie qu'il ne peut y avoir de courant en régime permanent. Lorsqu'il y a un courant, cela implique que la force de Coulomb n'est pas responsable du mouvement global des porteurs de charge dans un conducteur.
+
+\begin{rem}[Analogie]
+Le courant dans un conducteur peut être compris avec l'analogie de la rivière circulant dans son lit. Pour qu'il y ait un écoulement, il faut que l'eau s'écoule d'une région plus élevée vers une région plus basse. Ainsi, le mouvement de l'eau d'un point élevé vers un point plus bas est bien dû à la simple force de gravitation. Mais si l'on veut constituer un circuit fermé, alors il faut fournir de l'énergie (grâce à une pompe) pour amener l'eau à une plus grande hauteur, et le cycle peut alors effectivement recommencer.
+\end{rem}
+
+C'est exactement ce qui se passe dans un circuit électrique : une force autre que la force électrostatique doit permettre aux porteurs de charge de remonterle potentiel.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 22cm 19cm 27cm,scale=0.55]{./figures/generateur.pdf}
+\caption{Force responsable du courant.}
+\end{center}
+\end{figure}
+
+La seule façon d'obtenir un régime stationnaire avec un courant permanent $I$, c'est donc d'avoir un champ supplémentaire, appelé champ électromoteur $\vec{E_{m}}$, supérieur en norme et dirigé en sens inverse de $\vec{E_{s}}$ (le champ électrostatique). Mettons maintenant le générateur en circuit ouvert ($I=0$). Le fait qu'une différence de potentiel (ddp) se maintienne entre ses bornes implique nécessairement la présence d'une autre force compensant l'attraction coulombienne. Ainsi, à l'équilibre et en l'absence de courant, on doit donc avoir $\vec{E_{s}} + \vec{E_{m}}=0$. Cela signifie donc que la ddp ou tension aux bornes d'un générateur ouvert vaut~:
+
+$$V_{A}-V_{B}=\int_{A}^{B} \vec{E_{s}} \cdot \vec{\ud l}=-\int_{A}^{B} \vec{E_{m}} \cdot \vec{\ud l},$$
+
+où, bien évidemment, $V_{A}-V_{B}<0$. On appelle~:
+
+$$e=\int_{A}^{B} \vec{E_{m}} \cdot \vec{\ud l}$$
+
+\textbf{la force électromotrice} ou \textbf{fém} du générateur ($e>0$ est exprimé en volts).
+
+\subsection{Conventions}
+
+Dans une branche, le sens du courant peut être choisi arbitrairement. L'orientation de la tension est indépendante du choix de l'orientation de l'intensité~: $U_{AB}=V_A -V_B$ (de B vers A).\\
+
+\begin{itemize}
+\item Convention générateur~: $U$ et $I$ sont dans le même sens.
+\item Convention récepteur~: $U$ et $I$ sont de sens contraire.\\
+\end{itemize}
+
+Si une branche contient un dipôle polarisé de fém $e$, celui-ci sera compté $+e$ si en parcourant la branche, on entre par la borne $-$ (au sens d'une chute de potentiel).
+
+Exemple~:
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 20.5cm 15cm 27cm,scale=0.65]{./figures/Calcul_de_tension.pdf}
+\caption{Calcul de tension (exemple).}
+\end{center}
+\end{figure}
+
+\subsection{Relation courant / tension}
+
+Les dipôles sont caractérisés par une relation $U=f(I)$ ou $I=f(U)$ reliant la tension $U$ à leurs bornes au courant $I$ les traversant. Cette relation dépend des dipôles. La représentation graphique de cette relation s'appelle caractéristique. Si cette caractéristique passe par l'origine, le dipôle est dit passif ; dans le cas contraire, il est dit actif.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 18cm 21cm 27cm,scale=0.75]{./figures/caracteristiques.pdf}
+\caption{Exemples de caractéristiques.}
+\end{center}
+\end{figure}
+
+\subsubsection{Point de fonctionnement}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 18cm 16cm 27cm,scale=0.5]{./figures/circuit.pdf}
+\caption{Circuit électrique chargé}\label{circuit_01}
+\end{center}
+\end{figure}
+
+Soit le circuit électrique donné à la figure \ref{circuit_01}. Le courant s'écrit~:
+
+$$I=\frac{e}{r_{i}+R_{c}}$$
+
+d'où
+
+$$U_{AB}=e-r_{i}I=e-\frac{r_{i}e}{r_{i}+R_{c}}=\frac{e}{1+\frac{r_{i}}{R_{c}}}$$
+
+Le \textbf{point de fonctionnement} est l'intersection des courbes $U_{AB}=e-r_{i}I=R_{c}I$ comme le montre la figure \ref{fig_pdf}
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 19cm 9.5cm 28cm,scale=0.7]{./figures/point_de_fonctionnement.pdf}
+\caption{Point de fonctionnement.}\label{fig_pdf}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Générateur de tension}
+
+Si la résistance de charge $R_{c}$ est très grande devant $r_{i}$, la tension aux bornes du générateur est sensiblement indépendante de $R_{c}$. On obtient alors un générateur à tension constante dont la courbe caractéristique est donnée à la figure \ref{fig_gen_ten}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 19cm 9.5cm 28cm,scale=0.6]{./figures/relation_tension_courant1.pdf}
+\caption{Relation tension - courant $U=f(I)$ pour un générateur de tension.}\label{fig_gen_ten}
+\end{center}
+\end{figure}
+
+On en déduit~: $U = e - r_{i}I\approx e$.
+Plus la résistance $r_{i}$ est petite, plus le générateur est capable de fournir un courant fort et plus la tension sera proche de $e$.
+
+
+\subsubsection{Générateur de courant}
+
+Si la résistance de charge $R_{c}$ est très petite devant $r_{i}$, alors $i=\fractext{e}{r_{i}+R_{c}}\approx \fractext{e}{r_{i}}$ est indépendant de la charge. On obtient alors un générateur de courant constant dont la courbe caractéristique est donnée à la figure \ref{fig_gen_cour}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 19cm 9.5cm 28cm,scale=0.6]{./figures/relation_tension_courant2.pdf}
+\caption{Relation tension / courant~: $U=f(I)$ pour un générateur de courant.}\label{fig_gen_cour}
+\end{center}
+\end{figure}
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=3cm 20cm 12cm 28cm,scale=0.6]{./figures/generateur_de_courant.pdf}
+\caption{Générateur de courant.}\label{sch_gen_cour}
+\end{center}
+\end{figure}
+
+$\eta $ est le courant fournit par le générateur quand il y a court-circuit. En général, l'impédance interne est une résistance $r_{i}$ d'où~: $I = \eta  - \fractext{U}{r_{i}}$, avec $\eta = \fractext{e}{r_{i}}$.
+
+Ici, plus la résistance est grande, plus le générateur est capable de délivrer un courant proche de $\eta $. La symbolique utilisée pour schématiser ce type de générateur est présentée à la figure \ref{sch_gen_cour}.
+
+
+\subsubsection{Représentation Duale}
+L'équivalence entre les deux représentations est appelée \textbf{dualité}. En effet, on peut écrire à la fois :
+
+$$U = e - r_{i} I$$
+
+et
+
+$$I = \frac{e}{r_{i}}-\frac{U}{r_{i}}=\eta  - g_{i}U$$
+
+en posant $\eta =\fractext{e}{r_{i}}$ et $g_{i}=\fractext{1}{r_{i}}$. $e$ et $\eta $ sont orientés dans le même sens. Le principe de dualité schématisé est donné à la figure \ref{sch_dual}.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 20cm 21cm 27cm,scale=0.5]{./figures/representation_duale.pdf}
+\caption{Dualité générateurs de tension / courant.}\label{sch_dual}
+\end{center}
+\end{figure}
+
+\begin{itemize}
+ \item  Générateur de tension~:
+
+$$U_{AB}=R_{c} I$$
+$$I = \frac{E}{R_{i}+R_{c}}$$
+$$U_{AB}=\frac{R_{c}}{R_{i}+R_{c}} E$$
+
+ \item Générateur de courant~:
+
+$$\eta =I+i$$
+$$I=\eta - \frac{U_{AB}}{r_{i}} I$$
+$$I(1+\frac{R_{c}}{r_{i}})=\eta$$
+$$I=\frac{r_{i}}{r_{i}+R_{c}} \eta$$
+
+$$I = \frac{1}{r_{i}+R_{c}} e$$
+$$U_{AB}=R_{c} I$$
+$$U_{AB}=\frac{R_{c}}{R_{i}+R_{c}} E$$
+\end{itemize}
+
+On peut résumer l'effet de la dualité ainsi : quand un générateur de fém $E$ et de résistance interne $R_{i}$ débite dans une résistance de charge $R_{c}$~:
+
+\begin{itemize}
+\item si $r_{i} \ll R_{c}$, alors c'est une source de tension de fém $E$ ;
+\item si $r_{i} \gg R_{c}$, alors c'est une source de courant $I = \fractext{e}{r_{i}}$.
+\end{itemize}
+
+
+\subsubsection{Associations de dipôles~: dipôles équivalents}
+
+\begin{itemize}
+\item Association en série~:
+
+Tension~: $u = \sum_{k} u_{k}$ (somme algébrique sur une branche)
+Source de tension~: $e = \sum_{k} e_{k}$ (somme algébrique)
+Résistance~: $R = \sum_{k} R_{k}$
+
+De manière générale~: $u = \sum_{k} u_{k} = \sum_{k} e_{k} + (\sum_{k} R_{k}) I$.
+
+\begin{note}L'association en série de sources de courant idéale n'a aucun sens.
+\end{note}
+
+\item Association en parallèle~:
+
+Courant~: $I = \sum_{k} I_{k}$ (somme algébrique à un n\oe ud)
+Conducteur ohmique~: $G = \sum_{k} G_{k}$ (conductance équivalente)
+
+De manière générale~: $i = \sum_{k} i_{k} = \sum_{k} \eta_{k} + (\sum_{k} G_{k}) U$.
+
+\begin{note} L'association en parallèle de sources de tension idéales n'a aucun sens.
+\end{note}
+
+\end{itemize}
+
+
+\subsubsection{Adaptation d'impédance~: charge adaptée}
+
+Soit un générateur de tension dans une résistance $R_{c}$.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 20cm 10cm 27cm,scale=0.38]{./figures/circuit_charge.pdf}
+\caption{Générateur de tension chargé.}
+\end{center}
+\end{figure}
+
+$$ \left\{
+\begin{array}{ll}
+U_{AB}=e-r_{i}I \\
+U_{AB}=R_{c} I
+\end{array} \right.
+$$
+
+$$U_{AB}=e-\frac{r_{i}}{R_{c}} U_{AB}$$
+
+$$e = \frac{R_{c}+r_{i}}{R_{c}} U_{AB}$$
+
+$$U_{AB} = \frac{R_{c}}{R_{c}+r_{i}} e \qquad \textrm{et} \qquad I=\fractext{e}{R_{c}+r_{i}}$$
+
+
+\begin{description}
+
+\item[Puissance dissipée dans $r_{i}$]
+$$P_{c}=UI=r_{i} I^{2}$$
+
+Nous avons~:
+$$P_{c}=\frac{r_{i}}{(R_{c}+r_{i})^2} e^{2}$$
+
+\item[Puissance dissipée dans $R_ {c}$]
+$$P_{c}=U_{AB}I=R_{c} I^{2}$$
+avec $I=\fractext{e}{R_{c}+r_{i}}$.
+
+Nous avons~:
+$$P_{c}=\frac{R_{c}}{(R_{c}+r_{i})^2} e^{2}$$
+
+
+Quelle doit être la résistance de charge pour que la puissance soit maximale ?
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 18cm 12cm 27cm,scale=0.5]{./figures/puissance_fournie.pdf}
+\caption{Puissance fournie.}
+\end{center}
+\end{figure}
+
+$Pc$ est maximum lorsque $\fractext{\partial P_{c}}{\partial R_{c}}=0$, soit~:
+
+\begin{equation*}
+\begin{split}
+\frac{\partial P_{c}}{\partial R_{c}} & = \frac{R_{c}+R_{i}-2R_{c}}{(R_{c}+r_{i})^{3}} e^{2} \\
+& = \frac{R_{c}+r_{i}-2R_{c}}{(R_{c}+r_{i})^{3}} e^{2}
+\end{split}
+\end{equation*}
+
+donc lorsque $R_{i}=R_{c}$.
+\bigskip
+
+\item[Puissance totale]
+$$P_{tot}=eI=P_{c}+P_{i}=\frac{e^{2}}{R_{c}+r_{i}}$$
+\end{description}
+
+
+\section{Réseaux électriques}
+
+
+\subsection{Analyse d'un réseau en régime continu - Méthode de Kirchhoff}
+
+L'analyse d'un réseau consiste à déterminer l'intensité du courant qui circule dans chacune des branches ou des différences de potentiel de chaque branche.
+
+\begin{itemize}
+\item Si il y a $N$ n\oe uds, il y a $N-1$ équations de n\oe uds.
+\item Si il y a $B$ branches, il y a $B-(N-1)$ équations des mailles.
+\item On cherche $B$ intensités.
+\end{itemize}
+
+\begin{enumerate}
+\item Flécher arbitrairement les courants dans les différentes branches, puis les différences de potentiel. On choisi ensuite un sens arbitraire de description de chacune des mailles.
+\item Appliquer la loi des n\oe uds.
+Il n'y a pas d'accumulations de charges électriques à un n\oe ud, ce qui implique que la somme algébrique des intensités des branches connectées à un n\oe ud est nulle.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 22cm 20cm 26cm,scale=0.38]{./figures/loi_des_noeuds.pdf}
+\caption{Loi des n\oe uds.}
+\end{center}
+\end{figure}
+
+$$\sum_{i} I = 0$$
+
+On peut prendre comme convention $+$ si le courant va vers le n\oe ud et $-$ si il en sort.
+
+\item Appliquer la loi des mailles.
+En parcourant complètement une maille, la somme des différences de potentiels rencontrés est nulle : $V_{A} - V_{A}$.
+
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 18.5cm 18cm 27.5cm,scale=0.55]{./figures/loi_des_mailles.pdf}
+\caption{Loi des mailles.}
+\end{center}
+\end{figure}
+
+$$U_{1}-U_{2}-U_{3}+U_{4}+U_{5}=0.$$
+
+
+\item Résolution.
+Les $B$ équations obtenues à $B$ inconnues sont résolues par méthodes classiques (substitution, déterminant, ...). Nous obtenons alors des valeurs algébriques des courants~:
+si $I_{i} >0$~: le sens choisi équivaut au sens réel ;
+si $I_{i} >0$~: le sens choisi est inverse au sens réel.
+
+\end{enumerate}
+
+\subsection{Méthode de superposition}
+Le courant produit dans une branche quelconque d'un réseau, par un ensemble de sources, est la somme algébrique des courants produits dans chaque branche par chacune des sources considérées isolément, les autres sources étant rendues passives.
+Rendre passives les sources signifit annuler les fém (court-circuitées) et les courants électromoteurs (circuits ouverts).
+
+Exemple~:
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 23cm 20cm 27cm,scale=0.9]{./figures/methode_superposition.pdf}
+\caption{Méthodes de superposition.}
+\end{center}
+\end{figure}
+
+\subsection{Théorème de Millmann}
+
+Ce théorème s'applique dans le cas de branche en parallèle.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 23cm 9cm 27cm,scale=1]{./figures/methode_millmann.pdf}
+\caption{Théorème de Millmann.}
+\end{center}
+\end{figure}
+
+$$U_{AB} = \fractext{\sum_{i} \pm \fractext{e_{i}}{r_{i}}} {\sum_{i} \fractext{1}{r_{i}}}.$$
+
+La démonstration par dualité est évidente~:
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 21cm 21cm 27.5cm,scale=0.7]{./figures/methode_millmann_dual.pdf}
+\caption{Circuit dual équivalent.}
+\end{center}
+\end{figure}
+
+$$\frac{1}{R}=\sum_{i} \frac{1}{r_{i}}$$
+$$I=\sum_{i}I_{i}=\sum_{i}\frac{e_{i}}{r_{i}}$$
+$$U_{AB}=RI$$
+
+\subsection{Théorème de Thévenin}
+
+\begin{enon}
+Tout réseau linéaire compris entre deux bornes $A$ et $B$, aussi compliqué soit-il, est équivalent à un générateur unique de fém $e$ et de résistance interne $r$ telles que :
+\begin{enumerate}
+\item $e = E$ est la tension mesurée entre $A$ et $B$ à l'aide d'un voltmètre ;
+\item $r = R_{eq}$, où $R_{eq}$ est la résistance équivalente du réseau, obtenue en posant que toutes les forces électromotrices (f.é.m.) et les forces contre-électromotrices (f.c.é.m.) sont nulles.
+\end{enumerate}
+\end{enon}
+
+On ne s'intéresse qu'au fonctionnement d'un dipôle équivalent $(AB)$ d'un réseau. Si ce dipôle équivalent est une source de tension, on l'appelle générateur de Thévenin. Cette méthode est donc très utile pour déterminer des générateurs équivalents de circuits complexes pour lesquels les lois de Kirchhoff deviennent inadaptées, \cad lorsque le nombre d'inconnues dans le système d'équations devient trop grand.
+
+
+ \begin{figure}[h]
+\centering
+\subfigure[Schéma initial]{\includegraphics[width=5cm]{./figures/sch_thev_1-crop.pdf}}
+\subfigure[]{\includegraphics[width=2cm]{./figures/implique.pdf}}
+\subfigure[Générateur de Thévenin équivalent]{\includegraphics[width=5cm]{./figures/sch_thev_5-crop.pdf}}
+\caption{Exemple d'un schéma pour l'application du théorème de Thévenin.}
+\label{sch_thev_1}
+\end{figure}
+
+\begin{bex}[Cicuit équivalent]
+
+La figure \ref{sch_thev_1} présente une résistance $R$ alimentée par un circuit comprenant un générateur $E$ muni de sa résistance propre $R1$ et d'une résistance supplémentaire $R2$ en parallèle. On cherche à connaître le générateur équivalent aux bornes de $R$ entre $A$ et $B$.
+
+% \begin{figure}[h]
+% \begin{center}
+% \includegraphics[clip=true,viewport=0cm 18cm 20cm 27cm,scale=0.38]{./figures/a_faire.pdf}
+% \caption{Exemple de circuit chargé.}
+% \end{center}
+% \end{figure}
+
+L'application du théorème de Thévenin comporte 4 étapes.
+
+\begin{enumerate}
+
+\item On déconnecte le dipôle de charge (cf. \ref{sch_thev}(a)):
+
+\begin{figure}[h]
+\centering
+\subfigure[$1^{\'ere}$ étape - enlèvement de la charge]{\includegraphics[width=5cm]{./figures/sch_thev_2-crop.pdf}}
+\hspace{2cm}
+\subfigure[$2^e$ étape - calcul de la résistance équivalente]{\includegraphics[width=5cm]{./figures/sch_thev_3-crop.pdf}}\\
+\subfigure[$3^e$ étape - calcul de la tension à vide]{\includegraphics[width=5cm]{./figures/sch_thev_2-crop.pdf}}
+\hspace{2cm}
+\subfigure[$4^e$ étape - remplacement du dipôle par le générateur de Thévenin équivalent]{\includegraphics[width=5cm]{./figures/sch_thev_5-crop.pdf}}
+\caption{Etape du calcul d'un générateur de Thévenin équivalent.}
+\label{sch_thev}
+\end{figure}
+
+
+\item On supprime toutes les sources et on calcule la résistance équivalente $R_{th}$ (cf. \ref{sch_thev}(b)):
+
+\begin{equation}\label{r_th}
+R_{th} = \frac{R_{1}R_{2}}{R_{1}+R_{2}}
+\end{equation}
+
+\item On rétablit les sources et on calcule la tension à vide $E{th}=V_A-V_B$ qui donnera la tension du générateur équivalent (cf. \ref{sch_thev}(c)):
+
+D'après la loi d'Ohm $I1=I2$ et $I3=0\ A$, d'où:
+
+\begin{equation}
+I1=\frac{E1}{R1+R2}\end{equation}
+
+On en déduit d'après la loi des mailles :
+
+\begin{equation}\label{e_th}
+ E_{th} = V_A - V_B = R2.I2 =  \frac{R2.E1}{R1+R2}
+\end{equation}
+
+\item On remplace le dipôle de commande par le générateur de Thévenin équivalent (cf. \ref{sch_thev}(d)) où on utilise les quantités données aux équations \ref{r_th} et \ref{e_th}.
+
+\end{enumerate}
+
+\textbf{Remarque :} ATTENTION ! Ceci est un example et non un cas général. Seule la méthode en 4 étapes s'applique mais les équations diffèrent selon les cas. On doit systématiquement utiliser les lois de Kirchhoff pour déterminer les lois de tension et de courant.
+\end{bex}
+
+
+\subsection{Théorème de Norton}
+
+C'est la forme duale du théorème de Thévenin. Le générateur de tension est remplacé par un générateur de courant.
+
+\begin{figure}[h]
+\begin{center}
+\includegraphics[clip=true,viewport=0cm 18cm 20cm 27cm,scale=0.38]{./figures/a_faire.pdf}
+\caption{Générateur de Norton.}
+\end{center}
+\end{figure}
+
+La résistance est déterminée de la même façon. Le courant est le courant de court-circuit pratiqué aux bornes du dipôle de commande.
+
+\textit{Suite à venir...}

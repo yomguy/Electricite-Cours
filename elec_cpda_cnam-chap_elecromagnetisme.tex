@@ -1,0 +1,226 @@
+
+\section{Introduction}
+L'électrostatique nous a permis d'introduire les notions d'action à distance entre particules chargées au repos. Cette description cesse d'être complète lorsque les charges sont en mouvement. Il y a alors apparition de nouveaux types d'interactions qui constituent une partie de la théorie de l'électromagnétisme : la \textbf{magnétostatique}.
+
+\section{Le champ magnétique}
+
+\subsection{Préambule}
+
+Les effets magnétiques procèdent d'une \textbf{interaction à distance}. Comme en électrostatique, on doit donc pouvoir en déduire ses effets à l'aide d'un champ qui sera un outil mathématique. La connaissance de ce champ suffira à connaître tous les effets magnétiques indépendamment des sources qui l'ont créé.
+
+\subsection{Topographie du champ magnétique}
+
+Le champ magnétique est une grandeur vectorielle, on la note $\vec{B}$. Voici quelques exemples de situations mettant en jeu un champ magnétique dont on trace les lignes de flux.
+
+\begin{itemize}
+ \item Champ terrestre
+ \item Aimant droit
+ \item Aimant en U
+ \item Fil infini
+ \item Spire
+\end{itemize}
+
+\subsection{Définition du champ magnétique}
+
+Le champ magnétique $\vec{B}$ est défini par son action sur les particules chargées en mouvement.
+
+\subsubsection{Quelques expériences}
+
+\paragraph{Canon à électrons :}ampoule sous vide ($H_2,\ 10{-5}\ \mathrm{Bar}$). Les électrons projetés depuis l'électrodes sont déviés par le champ magnétique imposé (variable dans le cas du tube cathodique de la télévision).
+\paragraph{Bobine de Helmholtz :}champ uniforme. $\vec{v_0}$ est orientable.
+
+\subsubsection{Observations}
+
+\begin{figure*}[ht]
+\begin{center}
+\includegraphics[width=6cm]{./figures/champ_magn1.pdf}
+\label{biot_savart}
+\end{center}
+\end{figure*}
+
+Soit un électron évoluant dans l'espace à une vitesse $\vec{v_0}$ dans un champ magnétique $\vec{B}$ (voir la figure \ref{biot_savart}). Une force magnétique $\vec{F}$ apparaît et nous pouvons faire les observations suivantes:
+
+
+\begin{itemize}
+ \item $\vec{F}\bot\vec{B}$.
+ \item $\vec{F}\bot\vec{v_0}$.
+ \item $\vec{F}=\vec{0}$ si $\vec{v}//\vec{B}$.
+ \item Si on inverse $\vec{B}$, $\vec{F}$ s'inverse.
+ \item Si $q\times 2$, $F\times 2$
+\end{itemize}
+
+On déduit de ces observations une loi de force magnétique $\vec{F}_{magn}$ dite \textbf{Force de Lorentz} telle que :
+
+\begin{equation}
+ \vec{F}_{magn}=q \vec{v}\wedge\vec{B_{ext}}
+\end{equation} 
+
+
+Force de Lorentz généralisée :
+
+\begin{equation}
+ \vec{F}_{magn}=q (\vec{E} + \vec{v}\wedge\vec{B})
+\end{equation} 
+
+\subsection{Loi de Biot et Savart}
+
+\begin{equation}
+ d\vec{B}=\frac{\mu_0 I \vec{dl}\wedge \vec{AM}}{4\pi AM^3}
+\end{equation}
+
+Où $\mu_0$ est une constante fondamentale, appelée perméabilité magnétique du vide.
+
+En vertu du principe de superposition des champs magnétiques, le champ total créé par l'ensemble des circuits contenus dans l'espace s'écrit :
+
+\begin{equation}
+ \vec{B}=\int_{circuits} \frac{\mu_0 I \vec{dl}\wedge \vec{AM}}{4\pi AM^3}
+\end{equation}
+
+\subsection{Champ magnétique créé par un fil rectiligne}
+
+...
+
+\begin{equation}\label{Br_fil}
+ B(r)=\frac{\mu_0 I}{2\pi r}
+\end{equation}
+
+A l'avenir, on utilisera le théorème d'Ampère.
+
+\subsection{Action d'un champ $\vec{B}$ sur un conducteur parcouru par un courant - Force de Laplace}
+
+Le champ $\vec{B}$ exerce une force $\vec{dF}$ sur l'élément $d\tau$ telle que :
+
+\begin{equation}
+ \vec{dF} = \vec{J}\wedge\vec{B}. d\tau
+\end{equation}
+
+$\frac{\vec{dF}}{d\tau}$ est la densité volumique de force.
+
+
+
+
+
+\subsection{Le théorème d'Ampère}
+
+Nous avons vu en électrostatique que l'élément de circulation du champ électrique $\vec{E}$ sur un élément de de chemin $\vec{dl}$ se définissait par:
+
+\begin{equation*}
+ dC = \vec{E}.\vec{dl}
+\end{equation*}
+
+De la même façon, nous définissons un élément de circulation du champ magnétique par :
+\begin{equation*}
+ dC = \vec{B}.\vec{dl}
+\end{equation*}
+
+La circulation totale en suivant une ligne $\Gamma$ s'écrit :
+
+\begin{equation*}
+ C=\oint_\Gamma \vec{B}.\vec{dl}
+\end{equation*}
+
+Considérons le chemin $\Gamma$ fermé, constitué du cercle de centre $O$ et de rayon $r$ orienté comm indiqué sur la figure \ref{sch_amp1}. En chaque point du cercle, $\vec{B}$ et $\vec{dl}$ sont colinéaires et de même sens. L'élément de circulation est donc simplement $dC=\Vert\vec{B}\Vert \times \Vert\vec{dl}\Vert$.
+
+Puisque B est constant sur tout le cercle et ne dépend que du rayon $r$, la circulation totale du champ magnétique sur le cercle est $2\pi r B(r)$. D'après l'expression \ref{Br_fil} de $B(r)$, on en déduit :
+
+\begin{equation}\label{th_ampere}
+ C = \oint_\Gamma \vec{B}.\vec{dl} = \mu_0 I
+\end{equation}
+
+
+\subsection{Travail des forces de Laplace}
+
+Un circuit parcouru par un courant $I$ fixé dans un champ magnétique $\vec{B}$ sera soumis à une force de Laplace telle que :
+
+\begin{equation}\label{laplace}
+ \vec{F} = I \int \vec{dl}\wedge\vec{B}
+\end{equation} 
+
+
+\section{L'induction}
+
+\subsection{Introduction}
+
+2 expériences
+
+Généralisation :
+
+\begin{equation}
+ \vec{E_m}=-\frac{\partial \vec{A}}{\partial t} + \vec{v}\wedge\vec{B}
+\end{equation}
+
+et
+
+\begin{equation}
+ \vec{E_{tot}}=\vec{E_0}+\vec{E_m}
+\end{equation} 
+
+
+\subsection{Tension aux bornes d'un conducteur}
+
+\begin{equation}
+ V_C - V_D = R_{CD}I_{CD}-e_{CD}
+\end{equation}
+
+
+\subsection{Calcul de la force électromotrice}
+
+Cas du circuit fermé :
+
+\begin{equation}
+ e = -\frac{d\Phi}{dt}
+\end{equation} 
+
+\subsection{Auto-induction}
+
+On suppose $\vec{B_0}=\vec{0}$, mais $i(t)$ est non nul dans le circuit. Alors $i(t)$ crée un champ propre $B(t)$ impliquent un flux $\Phi_{propre}$ tel que:
+
+\begin{equation}
+ \Phi_{propre}=L i(t)
+\end{equation} 
+ où $L$ est l'inductance de la spirale en Henry.
+
+ Il est alors créée une f.e.m. induite $e_{induite}$ telle que:
+
+ \begin{equation}
+  e_{induite}=-\frac{d \Phi_{propre}}{dt}=-L\frac{di(t)}{dt}
+ \end{equation}
+
+\section{Le solénoïde}
+
+Le solénoïde est modélisé par une série de $N$ spires de rayons $R$, de même axe, parcourues par un même courant $I$ et disposées régulièrement sur une longueur $2a$. On note $O$ le centre du solénoïde, et $A$ et $B$ ses extrémités.
+
+On connaît le champ magnétique créé par une spire de courant sur son axe. On peut alors en déduire le champ créé par le solénoïde sur son axe :
+
+\begin{equation}
+ B(z)=\mu_0 N I \frac{\Omega_A - \Omega_B}{4 \pi}
+\end{equation}
+
+où $\Omega_A$ et $\Omega_B$ sont les angles solides sous lequel on voit respectivement la face $A$ et la face $B$ depuis la distance $z$ par rapport à $O$, et $\mu_0$ est la perméabilité magnétique du vide.
+
+Au centre du solénoïde, c'est-à-dire en $z=0$, cette formule devient :
+
+\begin{equation}
+ B(0)=\mu_0 N I \frac{a}{\sqrt{a^2 + R^2}}
+\end{equation}
+
+On peut montrer qu'il est possible de déterminer le champ magnétique dans tout l'espace ($\vec{B}(r,z)=B_z(r,z)\vec{u_z}+B_r(r,z)\vec{u_r}$) à partir du champ magnétique sur l'axe ($B(0,z)$ noté $F(z)$) grâce aux relations suivantes :
+
+\begin{eqnarray}
+    B_z(r,z) & = & F(z) - \frac{1}{4} r^2 F''(z)\\
+    B_r(r,z) & = & -\frac{1}{2}r F '(z) + \frac{1}{16} r^3 F'''(z).
+\end{eqnarray} 
+
+On s'aperçoit alors que ce champ est quasi-homogène dans tout le volume délimité par le solénoïde. Cela correspond à des lignes de champ quasi-parallèles entre elles. A l'extérieur du solénoïde, le champ est analogue à celui d'un aimant: il présente un pôle nord et un pôle sud. Il est cependant très faible.
+
+\subsection{Etablissment et suppression du courant dans un solénoïde}
+
+\subsection{Analyse d'un circuit RL}
+
+\subsubsection{Etablissment du courant}
+
+\subsubsection{Suppression du courant}
+
+
+
+

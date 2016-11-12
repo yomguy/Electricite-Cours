@@ -1,0 +1,33 @@
+<ipe version="60027" creator="Ipe 6.0 preview 27">
+<info media="0 0 595 842" created="D:20070116114202" modified="D:20070116114202" bbox="cropbox"/>
+<page gridsize="16">
+<layer name="alpha"/>
+<view layers="alpha" active="alpha"/>
+<text layer="alpha" stroke="black" matrix="1 0 0 1 0 -16" pos="208 592" type="label" width="9.2985" height="7.1221" depth="1.49" valign="bottom" size="normal">$\vec{v_0}$</text>
+<text stroke="black" matrix="1 0 0 1 0 16" pos="208 528" type="label" width="8.0566" height="9.6361" depth="0" valign="bottom" size="normal">$\vec{B}$</text>
+<text stroke="black" matrix="1 0 0 1 0 16" pos="224 528" type="label" width="30.2201" height="6.9257" depth="1.93" valign="bottom" size="normal">impos\'e</text>
+<path stroke="black" pen="normal">
+208 560 m
+67.9869 0 0 -67.9869 253.333 509.333 304 464 a
+</path>
+<path stroke="black" pen="normal" arrow="normal">
+208 560 m
+240 592 l
+</path>
+<path stroke="black" pen="normal" arrow="normal">
+208 560 m
+256 560 l
+</path>
+<path stroke="black" pen="normal" arrow="normal">
+320 496 m
+320 432 l
+</path>
+<path stroke="black" pen="normal" arrow="normal">
+320 496 m
+368 496 l
+</path>
+<text stroke="black" matrix="1 0 0 1 128 -48" pos="208 528" type="label" width="8.0566" height="9.6361" depth="0" valign="bottom" size="normal">$\vec{B}$</text>
+<text stroke="black" matrix="1 0 0 1 128 -80" pos="208 528" type="label" width="7.7902" height="9.6361" depth="0" valign="bottom" size="normal">$\vec{F}$</text>
+<text stroke="black" pos="192 560" type="label" width="7.7487" height="4.2895" depth="0" valign="bottom" size="normal">e-</text>
+</page>
+</ipe>
